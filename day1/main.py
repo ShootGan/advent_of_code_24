@@ -16,11 +16,12 @@ def get_part_one_results (left_list:list, right_list:list) -> int:
 if __name__ == '__main__':
     #load 
     left_list, right_list = load_lists('day1/input.txt')
+
     #part one nice
     result_readble = get_part_one_results(list(left_list), list(right_list))
     print(f'Part one readable solution: {result_readble}')
 
-     #part one one liner
+    #part one one liner
     result_one_liner = sum(abs(int(right) - int(left)) for left, right in zip(sorted(left_list), sorted(right_list)))
     print(f'Part one one liner solution: {result_one_liner}')
 
